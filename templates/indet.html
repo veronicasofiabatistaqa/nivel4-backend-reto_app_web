@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Lista de Elementos</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <ul>
+        {% for item in elementos %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Agregar nuevo</h2>
+    <form method="POST" action="/agregar">
+        <input type="text" name="elemento" placeholder="Nuevo elemento" required>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>
